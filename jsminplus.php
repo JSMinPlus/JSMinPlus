@@ -1749,9 +1749,9 @@ class JSParser {
     }
 
     // Include closing bracket or postfix operator in [start,end]
-    $te = $this->t->currentToken()->end;
-    if ($n->end < $te) {
-      $n->end = $te;
+    $token_end = $this->t->currentToken()->end;
+    if ($n->end < $token_end) {
+      $n->end = $token_end;
     }
 
     array_push($operands, $n);
